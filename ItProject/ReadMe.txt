@@ -1,0 +1,53 @@
+
+############ Proje İlerleyişi ############ 
+   - Giriş yapıldı ve proje oluşturuldu.
+   - Katmanların oluşturuldu.
+   - Entity katmanı sınıfları oluşturuldu.
+   - Tablolar rasında ilişkiler oluşturuldu.
+   - Key ve StringLength Attributeleri oluşturuldu.
+   - Context sınıfı oluşturuldu.
+   - Webconfig yapılandırması ve bağlantı ayarları yapıldı.
+   - Migration işlemleri tamamlandı ve veritabanı oluşturuldu.
+   - Add Migration işlemi tamamlandı.
+   - SQL üzerinde örnek veri girişleri yapıldı.
+   - Abstract ve Interface bileşenleri oluşturuldu.
+   - Repository sınıfı oluşturuldu ve metotların içi dolduruldu.
+   - Generic Interface oluşturuldu.
+   - Generic Repository oluşturuldu.
+   - BusinessLayer katmanı üzerinde çalışma yapıldı.
+   - Tablo kullanımı çalışmaları yapıldı.
+   - Listelenmeler yapıldı.
+   - Ekleme işlemine giriş yapıldı.
+   - Ekleme hataları ve verilmesi gereken hata mesajları oluşturuldu.
+   - Business Layer katmanında Abstract ve Interface olarak ICategoryService kavramları gösterildi.
+   - Constructor Business Metot oluşturuldu.
+   - DataAccessLayer katmanında entity framework sınıfları oluşturuldu.
+   - Fluent Validation kavramına giriş yapıldı ve ilgili bileşenler kuruldu.
+   - Validasyon işlemleri oluşturuldu.
+   - Html helper kapsamında "ValidationMessageFor" kullanımı gösterildi ve hata mesajları ilgili yerlerde gösterildi.
+   - Admin panel teması indirilerek yüklendi.
+   - Silme işlemi için buldurulma için GetByID kavramı gösterildi.
+   - Silme işlemi gerçekleştirildi.
+   - Güncelleme işlemi için güncellenecek bilgilerinin güncelleme sayfasına taşınması işlemleri yapıldı.
+   - Güncelleme işlemine giriş yapıldı.
+   - Entity State komutları ile ekleme, güncelleme ve silme yapıları düzenlendi.  
+   - Listeleme, ekleme, güncelleme ve silme yapıları yapıldı.
+   - Add migration işlemi ile database güncellendi ve yazar ekleme sayfası yapıldı.
+   - Düzenleme metotdu ve sayfası eklendi.
+   - ValidationMessage yazıları kırmızı yapıldı.
+   - IHeadingService,Heading Manager ve HeadingController oluşturuldu.
+   - Başlık listeleme sayfası oluşturuldu.
+   - Yeni başlık girişi işlemleri yapıldı.
+   - Menülere link verildi.
+   - Renklendirilmler oluşturuldu.
+   - Yazar resim boyutu arttırıldı.
+   - İçerikleri getiren GetListByID metotu yazıldı.
+   - Aktif pasif özellikleri yapıldı.
+   - 404 Hata sayfasu yapıldı.
+   - Admin,Manager,Personel login sayfası eklendi, tema eklendi
+   - Admin,Manager,Personel  login işlemleri yapıldı.
+   - Authentication ve Session işlemleri yapıldı.
+   - Rolleme işlemleri yapıldı.
+   - Session Allow Anonymous ile giriş yapmadan sayfalara geçiş işlemleri engellendi ve her yazarın kendi bilgilerine erişmesi sağlandı.
+   - İstatistik Sayfası Hazırlandı.
+   - Session yönetimi yapıldı.

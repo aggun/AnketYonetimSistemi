@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.SurveyAnswer
+@{
+    ViewBag.Title = "SurveyAnswer";
+    Layout = "~/Views/Shared/_PersonelLayout.cshtml";
+}
+
+
+
+
+<br />
+<h2>Soru Cevap Sayfası</h2>
+@using (Html.BeginForm("SurveyAnswer", "PersonelPanel", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Cevap")
+        @Html.TextBoxFor(x => x.SurveyAnswerText, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SurveyAnswerText)
+
+        @Html.HiddenFor(x => x.SurveyAnswerId)
+        @Html.HiddenFor(x => x.SurveyAnsweStatus)
+        @Html.HiddenFor(x => x.PersonalId)
+        @Html.HiddenFor(x => x.SurveyQuestionId)
+
+        <br />
+        <button class="btn btn-success"> Güncelle </button>
+    </div>}

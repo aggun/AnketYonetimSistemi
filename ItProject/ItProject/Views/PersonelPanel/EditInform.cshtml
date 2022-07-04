@@ -1,0 +1,35 @@
+﻿@model EntityLayer.Concrete.Personal
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PersonelLayout.cshtml";
+}
+
+<h2>Bilgi Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditInform", "PersonelPanel", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(x => x.PersonalName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonalName)
+    <br />
+    @Html.Label("Personel Soyadı")
+    @Html.TextBoxFor(x => x.PersonalSurname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonalSurname)
+    <br />
+    @Html.Label("Personel kullanıcı adı")
+    @Html.TextBoxFor(x => x.PersonalUsername, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonalUsername)
+    <br />
+    @Html.Label("Personel Mail")
+    @Html.TextBoxFor(x => x.PersonalMail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonalMail)
+    <br />
+    @Html.Label("Personel Şifre")
+    @Html.TextBoxFor(x => x.PersonalPassword, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonalPassword)
+
+    @Html.HiddenFor(x => x.PersonalId)
+    @Html.HiddenFor(x => x.PersonalStatus)
+    @Html.HiddenFor(x => x.CompanyId)
+    <button class="btn btn-success">Güncelle</button>
+</div>}

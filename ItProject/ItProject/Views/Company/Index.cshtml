@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Company>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Şirket Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Personeller</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.CompanyId</th>
+            <td>@item.CompanyName</td>
+            <td><a href="/AdminCategory/DeleteCategory/@item.CompanyId/" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Company/EditCompany/@item.CompanyId/" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Personal/Index/@item.CompanyId/" class="btn btn-primary">Personeller</a></td>
+        </tr>
+}
+</table>
+<a href="/Company/AddCompany" class="btn btn-info">Yeni Şirket Ekle</a>
+

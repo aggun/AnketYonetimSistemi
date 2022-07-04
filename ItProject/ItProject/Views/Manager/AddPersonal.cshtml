@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Personal
+@{
+    ViewBag.Title = "AddPersonal";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<h1>Yeni Personel Ekleme</h1>
+<br />
+@using (Html.BeginForm("AddPersonal", "Manager", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Şirket")
+        @Html.DropDownListFor(x => x.CompanyId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        @Html.Label("Peronel Adı")
+        @Html.TextBoxFor(x => x.PersonalName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonalName)
+        <br />
+        @Html.Label("Personel Soyadı")
+        @Html.TextBoxFor(x => x.PersonalSurname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonalSurname)
+        <br />
+        @Html.Label("Personel Mail")
+        @Html.TextBoxFor(x => x.PersonalMail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonalMail)
+        <br />
+        @Html.Label("Personel Şifre")
+        @Html.TextBoxFor(x => x.PersonalPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonalPassword)
+        <br />
+
+        <button class="btn btn-info">Personeli Oluştur</button>
+    </div>}
+

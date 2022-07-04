@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Survey
+@{
+    ViewBag.Title = "AddSurvey";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+
+<h1>Yeni Anket Ekleme</h1>
+<br />
+@using (Html.BeginForm("AddSurvey", "Survey", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Şirket")
+        @Html.DropDownListFor(x => x.CompanyId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        @Html.Label("Anket Adı")
+        @Html.TextBoxFor(x => x.SurveyName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SurveyName)
+        <br />
+
+        <button class="btn btn-info">Anketi Oluştur</button>
+    </div>}
+

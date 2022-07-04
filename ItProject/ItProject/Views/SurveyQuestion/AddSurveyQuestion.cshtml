@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.SurveyQuestion
+@{
+    ViewBag.Title = "AddSurveyQuestion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h1>Yeni Anket Sorusu Ekleme</h1>
+<br />
+@using (Html.BeginForm("AddSurveyQuestion", "SurveyQuestion", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Anket")
+        @Html.DropDownListFor(x => x.SurveyId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        @Html.Label("Anket Sorusu")
+        @Html.TextBoxFor(x => x.SurveyQuestionText , new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SurveyQuestionText)
+        <br />
+
+        <button class="btn btn-info">Soruyu Oluştur</button>
+    </div>}

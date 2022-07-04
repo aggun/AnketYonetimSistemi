@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+
+@model List<SurveyQuestion>
+@{
+    ViewBag.Title = "SurveyQuestion";
+    Layout = "~/Views/Shared/_PersonelLayout.cshtml";
+}
+
+<h2>SurveyQuestion</h2>
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>Soru</th>
+        <th>Cevapla</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.SurveyQuestionText</td>
+    <td>> <a href="/PersonelPanel/SurveyAnswer/@item.SurveyQuestionId/" class="btn btn-primary">Cevapla</a></td>
+
+</tr>}
+    <td><a href="/Personal/Index/" class="btn btn-primary">Personeller</a></td>
+</table>

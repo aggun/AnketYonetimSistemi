@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Personal
+@{
+    ViewBag.Title = "EditPersonal";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+
+<h2>Personel Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditPersonal", "Manager", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Personel Adı")
+        @Html.TextBoxFor(x => x.PersonalName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Soyadı")
+        @Html.TextBoxFor(x => x.PersonalSurname, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel kullanıcı adı")
+        @Html.TextBoxFor(x => x.PersonalUsername, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Mail")
+        @Html.TextBoxFor(x => x.PersonalMail, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Şifre")
+        @Html.TextBoxFor(x => x.PersonalPassword, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.PersonalId)
+        @Html.HiddenFor(x => x.PersonalStatus)
+        @Html.HiddenFor(x => x.CompanyId)
+        <button class="btn btn-success">Güncelle</button>
+    </div>}
+
+

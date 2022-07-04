@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Company
+@{
+    ViewBag.Title = "EditCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>Şirket Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditCompany", "Company", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.CompanyId)
+    <br />
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CompanyName)
+    <br />
+    <button class="btn btn-success"> Güncelle </button>
+</div>}
+

@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Company
+
+@{
+    ViewBag.Title = "AddCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Yeni Şirket Ekleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("AddCompany", "Company", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Şirket Adı")
+        @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CompanyName)
+        <br /><br />
+        <button class="btn btn-info">Kaydet</button>
+    </div>}
+

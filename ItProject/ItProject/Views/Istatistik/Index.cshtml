@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PersonelLayout.cshtml";
+}
+<br />
+<div class="card-deck">
+    <div class="card text-white bg-primary mb-4 " style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Şirket Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.company </h5>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-4 " style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Admin Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.admins </h5>
+        </div>
+    </div>
+    <div class="card text-white bg-primary mb-4 " style="max-width: 20rem; ">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Yönetici Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.manager </h5>
+        </div>
+    </div>
+</div>
+<div class="card-deck">
+
+
+    <div class="card text-white bg-warning mb-6 " style="max-width: 20rem;">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Anket Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.survey </h5>
+        </div>
+    </div>
+    <div class="card text-white bg-warning mb-6 " style="max-width: 20rem; height:auto">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Soru Sayısı </h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.SurveyQuestion</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-warning mb-6 " style="max-width: 20rem; height:auto">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Cevap Sayısı </h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.surveyAnswer</h5>
+        </div>
+    </div>
+</div>
+<br />
+<div class="card-deck">
+    <div class="card text-white bg-fuchsia mb-6 " style="max-width: 20rem;">
+
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Personel Sayıs </h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.surveyAnswer</h5>
+        </div>
+    </div>
+
+    <div class="card text-white bg-fuchsia mb-6 " style="max-width: 20rem; height:auto">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Evet Diyen Personel Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.Answeryes  </h5>
+        </div>
+    </div>
+    <div class="card text-white bg-fuchsia mb-6 " style="max-width: 20rem; height:auto">
+        <div class="card-header">İSTATİSTİK</div>
+        <div class="card-body">
+            <h5 class="card-title">Toplam Hayır Diyen Personel Sayısı </h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.Answerno</h5>
+        </div>
+    </div>
+
+</div>
+
